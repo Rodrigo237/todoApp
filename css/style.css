@@ -1,0 +1,228 @@
+:root {
+  --main-color: hsl(235, 24%, 19%);
+  --accent-color: hsl(235, 16%, 43%);
+  --text-color: hsl(200, 24%, 40%);
+  --background-color: hsl(235, 21%, 11%);
+  --btn-color: hsl(233, 14%, 35%);
+  --del-btn: hsl(234, 39%, 85%);
+  --blue : hsl(220, 98%, 61%);
+  --hover: hsl(236, 33%, 92%);
+}
+
+
+body{
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: 'Josefin Sans',Arial,sans-serif;
+}
+
+.image_background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 300px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container_list{
+    width: 100%;
+    max-width: 500px;
+    margin: 65px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    h2{
+        color: white;
+    }
+}
+
+.todo_list{
+    width: 100%;
+}
+
+.container_title{
+    max-width: 100%;
+    max-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.toggle_theme{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.input_content{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.input_todo{
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.todos{
+    list-style: none;
+    margin: 0;
+    padding: 0 26px;
+}
+
+.todos li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  background: var(--main-color);
+  transition: background 0.2s;
+  position: relative;
+}
+
+
+.todos li:first-child{
+   border-radius: 8px 8px 0 0;
+}
+
+.todos li.done span {
+  text-decoration: line-through;
+  color: var(--btn-color);
+}
+
+.completed-btn{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
+  border-radius: 4px;
+}
+
+
+
+.todos li span{
+    color: white;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.delete-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--del-btn);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.todos li:hover .delete-btn,
+.todos li:focus-within .delete-btn {
+  display: inline-block;
+}
+
+.filters-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem 1rem 2rem;
+    margin: 0 26px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 0 0 8px 8px;
+    gap: 1rem;
+}
+
+.items_left{
+    flex: 1;
+}
+
+.filters{
+    display: flex;
+    gap: 1rem;
+}
+
+.filters button{
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: color 0.2s, opacity 0.2s;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+}
+
+
+.filters button.active,
+.filters button:focus,
+.filters button:hover{
+    color: var(--hover);
+    opacity: 1;
+}
+
+.all-btn:hover{
+    opacity: 1;
+    color: var(--blue)!important;
+}
+
+
+.clear-btn{
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+}
+
+.clear-btn:hover{
+    opacity: 1;
+    color:white;
+}
+
+.show-btn{
+    margin-top: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.show-btn:hover{
+    opacity: 1;
+    color: var(--blue);
+}
+
+
+
+footer{
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    opacity: 0.7;
+}

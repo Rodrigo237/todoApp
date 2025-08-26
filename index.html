@@ -5,32 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <img src="./images/bg-desktop-dark.jpg" alt="" class="image_background">
+  <div class="container_list">
+    <div class="todo_list">
+        <div class="container_title">
+          <h2>T O D O</h2>
+          <img src="./images/icon-sun.svg" alt="" class="toggle_theme">
+        </div>
+        <div class="input_content">
+            <input type="text" class="input_todo" placeholder="Currently typing...">
+        </div>
+        <ul class="todos">
 
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        </ul>
+        <div class="filters-content">
+          <div>
+            <span class="items_left"></span>
+          </div>
+          <div class="filters">
+            <button class="all-btn">All</button>
+            <button class="active-btn">Active</button>
+            <button class="completed-btn">Completed</button>
+          </div>
+          <button class="clear-btn">Clear Completed</button>
+        </div>
+    </div>
+    <button class="show-btn">Drag and drop to reorder list</button>
   </div>
+  <footer class="attribution">
+    Coded by <a href="#">Rodrigo</a>.
+  </footer>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
